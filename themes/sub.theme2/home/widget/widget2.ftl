@@ -1,1 +1,0 @@
-<h3>This is FTL widget 2!</h3>

@@ -1,1 +1,0 @@
-<h3>This is widget 2!</h3>
