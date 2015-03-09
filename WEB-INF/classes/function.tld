@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  <tlib-version>1.0</tlib-version>
+<short-name>function</short-name>
+<!-- 定义该标签库的URI -->
+<uri>/tags/website-function</uri>
+	<function>
+		<name>getUrl</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getUrl( java.lang.String )</function-signature>   
+    </function>
+    <function>
+		<name>getLink</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getLink( java.lang.String )</function-signature>   
+    </function>
+    <function>
+		<name>getHttpsLink</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getHttpsLink( java.lang.String )</function-signature>   
+    </function>
+    <function>
+		<name>getInnerLink</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getInnerLink( java.lang.String )</function-signature>   
+    </function>
+     <function>
+		<name>getOtherLink</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getOtherLink( java.lang.String )</function-signature>   
+    </function>
+    <function>
+		<name>getHome</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getHome()</function-signature>   
+    </function>
+    <function>
+		<name>getCurrentUrl</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getCurrentUrl()</function-signature>   
+    </function>
+    <function>
+		<name>getContentImage</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getContentImage(java.lang.String,int,int)</function-signature>   
+    </function>	
+    <function>
+		<name>dateFormat</name>
+		<function-class>org.loushang.internet.util.DateTool</function-class>
+		<function-signature>java.lang.String  dateFormat( java.lang.String)</function-signature>   
+    </function>
+    <function>
+		<name>dateFormat2</name>
+		<function-class>org.loushang.internet.util.DateTool</function-class>
+		<function-signature>java.lang.String  dateFormat( java.lang.String, java.lang.String)</function-signature>   
+    </function>
+    <function>
+		<name>convertToString</name>
+		<function-class>org.loushang.internet.util.JsonUtils</function-class>
+		<function-signature>java.lang.String  convertToString( java.lang.Object)</function-signature>   
+    </function>
+    
+    <function>
+		<name>getFileUrl</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getFileUrl()</function-signature>   
+    </function>
+    
+    <!-- 切割字符串，将字符串切割成指定的长度，后面的用省略号补充 -->
+    <function>
+		<name>subString</name>
+		<function-class>org.loushang.internet.util.StringUtils</function-class>
+		<function-signature>java.lang.String  subString(java.lang.String,int)</function-signature>   
+    </function>
+    <function>
+		<name>phoneReplaced</name>
+		<function-class>com.inspur.ucweb.utils.ToolUtil</function-class>
+		<function-signature>java.lang.String  phoneReplaced(java.lang.String)</function-signature>   
+    </function>
+    <function>
+		<name>getEmailReplaced</name>
+		<function-class>com.inspur.ucweb.utils.ToolUtil</function-class>
+		<function-signature>java.lang.String  getEmailReplaced(java.lang.String)</function-signature>   
+    </function>
+    <function>
+		<name>formatDateBySeconds</name>
+		<function-class>com.inspur.ucweb.utils.ToolUtil</function-class>
+		<function-signature>java.lang.String  formatDateBySeconds(java.lang.String,java.lang.String)</function-signature>   
+    </function>
+    <!-- 去除html标签 -->
+    <function>
+		<name>rmHtmlTag</name>
+		<function-class>org.loushang.internet.util.HtmlTagUtil</function-class>
+		<function-signature>java.lang.String  rmHtmlTag(java.lang.String)</function-signature>   
+    </function>
+    <!-- 将字符串转换为数字 -->
+    <function>
+		<name>convertNumber</name>
+		<function-class>org.loushang.internet.util.StringUtils</function-class>
+		<function-signature>java.lang.String  convertNumber(java.lang.String)</function-signature>   
+    </function>
+    <!-- getModuleValue格式 -->
+    <function>
+		<name>getModuleValue </name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getModuleValue(java.lang.String )</function-signature>    
+    </function>
+    <!-- 根据key获取frame.properties中的值 -->
+    <function>
+		<name>getFrameConf</name>
+		<function-class>org.loushang.internet.util.el.Function</function-class>
+		<function-signature>java.lang.String  getFrameConf(java.lang.String)</function-signature>    
+    </function>
+    
+</taglib>

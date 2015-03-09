@@ -1,0 +1,49 @@
+<project name="build_rtf" default="jar" basedir=".">	
+	
+	<property name="class.dir" value="WEB-INF/classes"/>
+	
+	<property name="build.dir" value="jar" />
+	<property name="jar.name" value="internet-core.jar" />
+	<property name="lib" value="WEB-INF/lib" />
+	
+	<path id="classpath">
+		<fileset  dir="${lib}" includes="**/*.jar"/> 
+	</path>
+	
+	<target name="init">
+		<echo message="+--- init start ---+" />
+		<tstamp />
+		<delete dir="${build.dir}" />
+		<mkdir dir="${build.dir}" />		
+		<echo message="+--- init end ---+" />
+	</target>
+	
+	<target name="jar" depends="init" >		
+		<echo message="+--- jar *.class files start ---+" />
+		
+		<pathconvert property="mf.classpath" pathsep=" lib/"> 
+
+			<path refid="classpath" /> 
+			
+			<flattenmapper />
+
+		</pathconvert> 
+
+		<jar destfile="${build.dir}/${jar.name}" update="true">
+			<fileset dir="${class.dir}" includes="org/loushang/internet/**">
+			</fileset>
+			<fileset dir="${class.dir}" includes="conf/**">
+			</fileset>
+			<fileset dir="${class.dir}" includes="uc.key">
+			</fileset>
+			<manifest>
+				<!--
+			 	<attribute name="Main-Class" value="${mainclass}"/>
+				<attribute name="Class-Path" value="./ lib/${mf.classpath}"/>
+				-->
+			</manifest>
+		</jar>
+		<echo message="+--- jar *.class files end ---+" />
+	</target>
+	
+</project>
