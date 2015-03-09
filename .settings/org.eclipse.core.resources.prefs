@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
-encoding//conf/frame.properties=UTF-8
-encoding//filter/errcodes.properties=UTF-8
-encoding//filter/login.properties=UTF-8
-encoding//src/uc.key=UTF-8
-encoding/<project>=UTF-8
+encoding//WebContent/themes/ace/home/screen/index.jsp=UTF-8
+encoding//WebContent/themes/ace/home/widget/header.jsp=UTF-8
+encoding//WebContent/themes/default/home/screen/index.jsp=UTF-8
+encoding//WebContent/themes/default/home/widget/components.jsp=UTF-8
+encoding//WebContent/themes/default/home/widget/footer.jsp=UTF-8
+encoding//src/frame.properties=UTF-8
+encoding//src/login.properties=UTF-8
+encoding//src/modules.properties=UTF-8
