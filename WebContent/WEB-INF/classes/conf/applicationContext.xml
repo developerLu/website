@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+	<bean id="sqlMapClientTemplate" class="com.alibaba.cobar.client.CobarSqlMapClientTemplate">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+		<property name="cobarDataSourceService" ref="dataSources" />
+		<property name="router" ref="internalRouter" />
+		<property name="sqlAuditor">
+			<bean class="com.alibaba.cobar.client.audit.SimpleSqlAuditor" />
+		</property>
+		<property name="profileLongTimeRunningSql" value="true" />
+		<property name="longTimeRunningSqlIntervalThreshold" value="3600000" />
+	</bean>
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="master_main" />
+		<property name="configLocation" value="classpath:sqlmap-config.xml" />
+	</bean>
+	<bean id="internalRouter" class="com.alibaba.cobar.client.router.config.DefaultCobarClientInternalRouterXmlFactoryBean">
+		<property name="configLocation" value="classpath:/sqlaction-only-rules.xml" />
+	</bean>
+	<bean id="SpringContextHolder" class="com.inspur.databus.util.SpringContextHolder"></bean>
+	<bean id="GlobalId" class="com.inspur.databus.service.id.impl.DbGlobalId">
+		<property name="sqlMapClient" ><ref bean="sqlMapClientTemplate"/></property>
+	</bean>
+	<bean id="UUIDGlobalId" class="com.inspur.databus.service.id.impl.UUIDGlobalId">
+		<property name="sqlMapClient" ><ref bean="sqlMapClientTemplate"/></property>
+	</bean>
+
+</beans>
