@@ -1,0 +1,21 @@
+BODY {
+	BACKGROUND: #ddd; FONT: 12px Arial, Helvetica, sans-serif; COLOR: #fff
+}
+.logintable {
+	BORDER: #217e7e 1px solid; BACKGROUND:#339999; MARGIN-LEFT: auto;MARGIN-RIGHT: auto
+}
+INPUT {
+	BORDER: #fff 1px solid; BACKGROUND: #fff
+}
+TD.line1 {
+	BORDER-BOTTOM: #7fc2c2 1px solid
+}
+A {
+	COLOR: #ffff99; text-decoration:none
+}
+A:hover {
+	text-decoration:underline
+}
+.button {
+	BORDER: #217e7e 1px solid; PADDING-RIGHT: 6px; PADDING-LEFT: 6px; BACKGROUND: #c6eeee repeat-x; PADDING-BOTTOM: 0px; FONT: 12px Arial, Helvetica, sans-serif; COLOR: #333; PADDING-TOP: 2px; HEIGHT: 25px; vertical-align:middle
+}

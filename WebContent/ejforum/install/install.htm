@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>EasyJForum 用户使用说明书 - 安装指南</title>
+<link rel="stylesheet" href="guide.css">
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0">
+<script type="text/javascript" src="header.js"></script>
+<DIV id=nav>用户使用说明书 &raquo;&nbsp; 安装指南</DIV>
+<div class="mainbox">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="title">安装指南</td></tr>
+<tr><td><ul>
+<li><a href="#item01">环境要求</a></li>
+<li><a href="#item02">详细安装步骤</a></li>
+<li><a href="#item03">系统启动和初始设置</a></li>
+</ul></td></tr>
+<tr><td><hr/></td></tr>
+<tr><td>
+<p class="subtitle" id="item01">环境要求</p><ul>
+EasyJForum 基于 Java 技术，具备跨平台特性，可以运行于任何支持 Java 的操作系统环境下。具体运行环境要求如下：</ul>
+<ul>
+<li>JDK/JRE 5.0 以上的 Java 运行时环境</li>
+<li>支持 JSP/Servlet 2.0 以上的 http 服务器（如 Tomcat、Resin 等）</li>
+<li>数据库为 MySQL 5.0 及以上 / Oracle 9i 及以上 / SQL Server 2000 及以上 / Hsqldb 1.8.0及以上</li></ul>
+<ul>
+以上软件除 Hsqldb 以外，其余软件均需用户自己安装好并能正常运行。Hsqldb 是一个轻便的嵌入式数据库，已经包含在 EasyJForum 的发布包中，不必另行安装，非正式的小型论坛可以采用此数据库（运行不太稳定）。
+<p>如果您租用虚拟主机，请咨询虚拟主机提供商，您的空间服务器是否已安装了上述软件。由于 EasyJForum 的数据表具有前缀设计，因
+此通常情况下可以将 EasyJForum 与其他软件安装在同一个数据库中而不会产生冲突。</p>
+若使用除 Hsqldb 以外的其它数据库，您的数据库账号应当拥有 CREATE、DROP、ALTER 等执行权限以保证系统的正常运行。
+</ul><br/>
+<p class="subtitle" id="item02">详细安装步骤<ul type="1">
+EasyJForum 的安装非常简单方便。如果采用 Hsqldb 数据库，则只需执行下述的第一步即可完成安装，其它数据库则需要完成三个步骤：
+<p><li><b>上传文件</b></li></p>
+首先将 EasyJForum 压缩包采用 FTP 等方式上传到服务器上，解压缩后将 ejforum 目录（可以改名）作为一个 Context 放到 Tomcat 或其它 Java Web 服务器的相应目录下，然后修改 Web 服务器的配置文件，使此 Context 生效即可（Context 的概念和含义请参考 Java Web 服务器的文档）。
+<p>如果采用 Oracle 数据库，则需另行下载 Oracle 10g 以上的 JDBC 驱动程序包并放置在 Context 的 WEB-INF/lib 目录下。<br/>
+如果决定采用 Hsqldb, 则安装过程已经结束（配置文件中的缺省数据库），否则请执行下面两个步骤。</p>
+<p><li><b>运行数据库脚本</b></li></p>
+创建或选择一个准备用于本论坛系统的数据库用户，赋予其足够的权限，然后依据数据库的不同选择运行 install 子目录下的数据库脚本文件，以创建本论坛所需的数据库表和插入初始化数据。（如果不能顺利运行，请直接复制脚本语句执行或者将脚本文件另存为 UTF-8 格式后运行）
+<p><li><b>修改配置文件</b></li></p>
+用任何文本编辑器打开位于 EasyJForum Context 子目录下的 WEB-INF/conf 下的 config.xml 文件 ，修改数据库配置为您所使用的数据库类型（将其它 database 节点注释掉，仅保留您使用的 database 配置节点），并修改用户名、密码和数据库名称（将 {DATABASE}, {USERNAME}, {PASSWORD} 分别替换为您使用的数据库名、用户名和密码）。
+<p>论坛的系统管理员名称默认为 admin，由配置文件中的 &lt;system adminUser="admin"/&gt; 指定，您可以修改此名称以加强安全性。<br/>
+此外，配置文件的 misc 节点中还定义了论坛的一些运行参数，这些参数的具体含义请在论坛运行时的后台管理中查阅，一般情况下您不必修改这些值。
+</ul><br/>
+<p class="subtitle" id="item03">系统启动和初始设置<ul  type="1">
+EasyJForum 安装完毕后，重新启动 Web 服务器（比如 Tomcat）就可以访问论坛了。<br/>
+EasyJForum 在安装完成后初始运行时，应进行一些必要的设置以使论坛能够正常运行，比如论坛名称、logo、系统邮件帐号等。
+<p>输入论坛网址进入论坛，以配置文件中的系统管理员登录论坛（默认为admin，其初始密码与用户名相同），然后点击主菜单中的“后台管理”进入后台管理界面，根据界面描述和提示信息对论坛参数进行设置。
+<p>运行时若出现问题，请查看 WEB-INF/log 下面的日志文件，找到具体的错误原因然后排除之。<br/>
+若对于安装和配置仍有不明白之处，请访问我们的技术支持论坛以寻求解答，详见技术支持信息页。<br/>
+<font color=red>提示：您可以免费使用本软件，但页脚的软件版权标识必须保留，免费授权协议必须遵守，否则属于可耻的侵权行为! 请尊重我们的辛勤劳动，谢谢!</font></p>
+</ul>
+</td></tr></table>
+</div>
+<script type="text/javascript" src="footer.js"></script>
+</body>
+</html>

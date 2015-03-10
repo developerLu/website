@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>EasyJForum 用户使用说明书 - 升级指南</title>
+<link rel="stylesheet" href="guide.css">
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0">
+<script type="text/javascript" src="header.js"></script>
+<DIV id=nav>用户使用说明书 &raquo;&nbsp; 升级指南</DIV>
+<div class="mainbox">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+  <td class="title">升级指南</td>
+</tr>
+<tr><td>
+<ul type="1">
+EasyJForum 升级步骤一般如下：
+<p><li>运行程序包中的 install/script/upgrade 目录下的相应版本的数据库升级脚本。<br>
+如果是 Hsqldb 数据库，请自行下载  Hsqldb 管理工具进行操作，在运行此管理工具时可能需要暂停论坛服务。</li>
+<p><li>使用新的程序包中的文件代替旧的程序文件，但 WEB-INF/conf, WEB-INF/data 目录除外。<br>
+	如果您自行定制了界面风格，即不通过后台管理而直接对 styles 目录下的文件进行了改动，请先备份这些文件以免被覆盖。</li>
+<p><li>如果 WEB-INF/conf, WEB-INF/data 中的文件需要修改时，会根据不同版本的具体情况另行说明。</li>
+<p><li>删除 WEB-INF/lib 目录下旧版本的 ejforum-*.*.jar 文件。</li>
+<p><li>重新启动论坛服务程序。</li>
+</ul>
+</td></tr></table>
+</div>
+<script type="text/javascript" src="footer.js"></script>
+</body>
+</html>

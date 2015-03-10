@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN" "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<!--
+    Configuration file for UrlRewriteFilter http://tuckey.org/urlrewrite/
+-->
+<urlrewrite>
+
+    <rule>
+        <from>^/ejforum/forum-([0-9]+)-([0-9]+)-([0-9]+)\.html</from>
+        <to>/ejforum/forum.jsp?sid=$1&amp;fid=$2&amp;page=$3</to>
+    </rule>
+
+    <rule>
+        <from>^/ejforum/topic-([0-9]+)-([0-9]+)\.html</from>
+        <to>/ejforum/topic.jsp?tid=$1&amp;page=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/ejforum/topic-([0-9]+)-r([0-9]+)\.html</from>
+        <to>/ejforum/topic.jsp?tid=$1&amp;rid=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/ejforum/forum-([0-9]+)-([0-9]+)-([0-9]+)\.xml</from>
+        <to>/ejforum/rss?sid=$1&amp;fid=$2&amp;style=$3</to>
+    </rule>
+
+    <rule>
+        <from>^/ejforum/topics-([a-z]+)-([0-9]+)\.xml</from>
+        <to>/ejforum/rss?fid=$1&amp;style=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/ejforum/forums-([0-9a-z]+)-([0-9]+)\.xml</from>
+        <to>/ejforum/opml?sid=$1&amp;style=$2</to>
+    </rule>
+
+</urlrewrite>
+

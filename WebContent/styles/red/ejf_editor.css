@@ -1,0 +1,177 @@
+#postbtn {
+	BORDER-RIGHT: #fdb939 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #fffdee 1px solid; PADDING-LEFT: 10px; BACKGROUND: #fff8c5; PADDING-BOTTOM: 0px; BORDER-LEFT: #fffdee 1px solid; COLOR: #090; MARGIN-RIGHT: 1em; PADDING-TOP: 0px; BORDER-BOTTOM: #fdb939 1px solid
+}
+#post_tb {
+	TABLE-LAYOUT: fixed
+}
+#post_tb EM {
+	COLOR: #999
+}
+.forumeditor {
+	BEHAVIOR: url(#default#userdata);
+}
+.editor_doc {
+	background-color: #fff
+}
+.dropbutton {
+	color: #000
+}
+#editor_tb {
+	BORDER-RIGHT: #dddddd 1px solid; BORDER-TOP: #dddddd 1px solid; BACKGROUND: #f7f7f7; BORDER-LEFT: #dddddd 1px solid; BORDER-BOTTOM: #dddddd 0px solid
+}
+#editor_tb TD {
+	PADDING: 2px; BORDER-STYLE: none
+}
+.editortoolbar TABLE {
+	WIDTH: auto
+}
+.editortoolbar A {
+	BORDER: #f7f7f7 1px solid; DISPLAY: block; PADDING: 1px; CURSOR: pointer
+}
+.editortoolbar A:hover {
+	BORDER: #d8d8d8 1px solid; BACKGROUND-COLOR: #f0f0f0; TEXT-DECORATION: none
+}
+.editor_switcher_bar {
+	POSITION: relative
+}
+.editor_switcher_bar A {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN-RIGHT: 5px; PADDING-TOP: 0px
+}
+.editor_switcher_bar BUTTON { 
+	border: #ddd 1px solid; BORDER-BOTTOM-COLOR: #FFF; font-weight: bold; height: 30px; height: 28px; line-height: 28px; background: #FFF; margin: 0px 2px; position: relative; top: 6px; cursor: pointer; 
+}
+*+html .editor_switcher_bar BUTTON { 
+	top: 4px; 
+}
+* html .editor_switcher_bar BUTTON { 
+	top: 4px; 
+}
+.editor_switcher_bar .editor_switcher {
+	FONT-WEIGHT: normal; BORDER-BOTTOM-COLOR: #dddddd
+}
+.editor_text_tb {
+	BORDER: #dddddd 1px solid;
+}
+.editor_text_tb TD{
+	background: #fff
+}
+.editor_text_tb TEXTAREA {
+	FONT: 12px/1.6em "Courier New", Courier, monospace; WIDTH: 99%; BORDER-STYLE: none
+}
+.editor_button_tb {
+	BORDER-RIGHT: #dddddd 1px solid; BORDER-TOP: #dddddd 0px solid; BACKGROUND: #f7f7f7; MARGIN-BOTTOM: 10px; BORDER-LEFT: #dddddd 1px solid; BORDER-BOTTOM: #dddddd 0px solid; BORDER-TOP-STYLE: none
+}
+.editor_button_tb BUTTON {
+	BORDER-TOP: none; BORDER-LEFT: 1px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM: none; COLOR: #069; BORDER-RIGHT: none
+}
+.editor_attach {
+	BORDER: #dddddd 1px solid
+}
+#wysiwyg {
+	FONT: 14px/1.6em Helvetica, Arial, sans-serif
+}
+#wysiwyg * {
+	LINE-HEIGHT: normal
+}
+#wysiwyg A {
+	COLOR: #069; TEXT-DECORATION: underline
+}
+#wysiwyg LI {
+	MARGIN-LEFT: 2em
+}
+#wysiwyg STRONG {
+	FONT-WEIGHT: bold
+}
+#wysiwyg B {
+	FONT-WEIGHT: bold
+}
+#wysiwyg EM {
+	FONT-STYLE: italic
+}
+#wysiwyg I {
+	FONT-STYLE: italic
+}
+.fontname_menu {
+	WIDTH: 97px
+}
+.fontname_menu LI {
+	CURSOR: pointer
+}
+.fontsize_menu {
+	WIDTH: 27px; LINE-HEIGHT: normal
+}
+.fontsize_menu LI {
+	CURSOR: pointer
+}
+.color_normal {
+	PADDING: 2px; BORDER-STYLE: none
+}
+.color_normal DIV {
+	BORDER: #fff 1px solid; OVERFLOW: hidden; WIDTH: 10px; CURSOR: pointer; HEIGHT: 10px
+}
+.color_hover {
+	PADDING: 2px; BORDER-STYLE: none
+}
+.color_hover DIV {
+	BORDER: #000 1px solid; OVERFLOW: hidden; WIDTH: 10px; CURSOR: pointer; HEIGHT: 10px
+}
+.postform {
+	FLOAT: left
+}
+.postform {
+	PADDING-BOTTOM: 10px; WIDTH: 59%
+}
+.postform P LABEL {
+	FONT-WEIGHT: bold; VERTICAL-ALIGN: top
+}
+.postform H5 INPUT {
+	WIDTH: 60%
+}
+.postform P {
+	MARGIN: 0px 1em
+}
+.postform DIV {
+	MARGIN: 0px 1em
+}
+.postform H4 * {
+	VERTICAL-ALIGN: middle
+}
+.postform H4 INPUT {
+	WIDTH: 60%
+}
+.postform TEXTAREA {
+	WIDTH: 90%; HEIGHT: 160px
+}
+.postform .btns {
+	MARGIN-TOP: 0.5em; COLOR: #999; LINE-HEIGHT: 30px
+}
+.postform .btns BUTTON {
+	VERTICAL-ALIGN: middle
+}
+.postform .btns A {
+	COLOR: #069
+}
+.postform BUTTON {
+	PADDING: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: pointer; COLOR: #069; BORDER-STYLE: none
+}
+.postform #postbtn {
+	DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 2.3em
+}
+.btns EM {
+	COLOR: #999
+}
+#smilieslist {
+	BORDER: #e8e8e8 1px solid; overflow:hidden; TEXT-ALIGN: center; width:168px
+}
+#smilieslist TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 8px; CURSOR:pointer; PADDING-TOP: 8px; BORDER-STYLE: none
+}
+#smilieslist TD:hover {
+	background-color:#e8e8e8
+}
+#smilieslist .pages {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 0px; FLOAT: none; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#smilieslist H4 {
+	PADDING: 5px; PADDING-LEFT: 8px; BACKGROUND: #f7f7f7; COLOR: #069; font-weight:normal; LINE-HEIGHT: 20px; BORDER-BOTTOM: #e8e8e8 1px solid; TEXT-ALIGN: left; width:168px
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><setting> 
+  	<baseinfo> 
+  		<forumName default="unnamed">test</forumName>
+		<forumLogo default="logo.gif">logo.gif</forumLogo>
+  		<website>127.0.0.1</website>
+  		<siteUrl>http://127.0.0.1</siteUrl>
+  		<footerMailAddr>adminMail</footerMailAddr>
+		<certCode/>
+  		<dateFormat default="yyyy-mm-dd">yyyy-mm-dd</dateFormat>
+  		<timezone default="8">8</timezone>
+  		<adminMailAddr>adminMail@163.com</adminMailAddr>
+  		<sysMailAddr>adminMail@163.com</sysMailAddr>
+  		<sysMailUser>adminMail@163.com</sysMailUser>
+  		<sysMailPasswd>adminMail@163.com</sysMailPasswd>
+  		<sysSmtpHost>adminMail@163.com</sysSmtpHost>
+	</baseinfo>
+
+  	<access>
+  		<registerType default="open"/>
+  		<reserveWords/>
+  		<userExpireDays default="0" min="0"/>
+  		<ipBanned/>
+  		<ipAllowed/>
+  		<ipAdminAllowed/>
+  	</access>
+
+  	<display>
+  		<defaultStyle default="default">default</defaultStyle>
+  		<showStyleList default="no">no</showStyleList>
+  		<showSectionLink default="no">no</showSectionLink>
+  		<tsExchange default="none">none</tsExchange>
+  		<showHotlinks/>
+  		<imageFile/>
+  		<imageLink/>
+  		<imageTitle/>
+  		<showUnion default="yes">no</showUnion>
+  		<showOnlineUsers default="yes">yes</showOnlineUsers>
+  		<topicsPerPage default="20" max="50" min="5">20</topicsPerPage>
+  		<maxTopicPages default="50" min="0">50</maxTopicPages>
+  		<hotTopicPosts default="10" min="1">10</hotTopicPosts>
+		<hotTopicVisits default="100" min="10">100</hotTopicVisits>
+  		<postsPerPage default="10" max="50" min="1">10</postsPerPage>
+  		<showAvatar default="yes">yes</showAvatar>
+  		<showBrief default="no">no</showBrief>
+  	</display>
+
+  	<seo>
+  		<appendTitle/>
+  		<keywords/>
+	  	<description/>
+  	</seo>
+  		  	  
+  	<functions> 
+  		<maxPostLength default="50" min="0"/>
+  		<maxAttachNum default="5" max="10" min="0"/>
+  		<allowAttachTypes>chm,pdf,zip,rar,tar,gz,jar,gif,jpg,jpeg,png,swf</allowAttachTypes>
+  		<maxAttachSize default="5000" min="100"/>
+  		<maxReplies default="2000" max="9999" min="10"/>
+  		<logKeepMonths default="3" max="99" min="0"/>
+  		<trashKeepMonths default="3" max="99" min="0"/>
+  		<headAdCode/>
+  		<footAdCode/>
+  		<footRemark/>
+  		<judgeOptions/>
+  		<mailEvents default="error,audit,report,version"/>
+	  	<RssStyle default="A"/>
+  		<topicsPerChannel default="15" max="100" min="5"/>
+		<RssSub default="yes"/>
+  	</functions>
+
+  	<credits> 
+  		<userInitValue default="0"/>
+  		<newTopic default="10" max="99" min="0"/>
+  		<newReply default="5" max="99" min="0"/>
+  		<bestReply default="20" max="99" min="0"/>
+  		<digestTopic default="20" max="99" min="0"/>
+  		<upload default="10" max="99" min="0"/>
+  		<download default="-0" max="0" min="-99"/>
+  	</credits>
+	
+  	<censor>
+  	</censor>
+
+  	<styles>1_default=默认风格
+1_cyan=青色主题
+1_black=黑色主题
+1_green=绿色主题
+1_red=红色主题
+	</styles>
+
+	<mycss>
+	</mycss>
+
+</setting>

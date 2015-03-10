@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+    <!-- DB Connection Pool - Hsqldb 
+  	<database maxActive="10" maxIdle="10" minIdle="2" maxWait="10000" 
+   		 	  username="sa" password="" 
+   		 	  driverClassName="org.hsqldb.jdbcDriver" 
+   		 	  url="jdbc:hsqldb:file:/WEB-INF/data/ejf;shutdown=true" 
+   		 	  sqlAdapter="sql.HsqldbAdapter"/>-->
+    <!-- DB Connection Pool - Mysql-->
+  	<database maxActive="10" maxIdle="10" minIdle="2" maxWait="10000" 
+ 		 	  username="root" password="root" 
+   		 	  driverClassName="com.mysql.jdbc.Driver" 
+   		 	  url="jdbc:mysql://localhost:3306/ejforum?characterEncoding=gbk&amp;autoReconnect=true&amp;autoReconnectForPools=true&amp;zeroDateTimeBehavior=convertToNull"
+   		 	  sqlAdapter="sql.MysqlAdapter"/>
+	
+	
+    <!-- DB Connection Pool - MS SQL Server 
+    <database maxActive="10" maxIdle="10" minIdle="2" maxWait="10000" 
+   		 	  username="{USERNAME}" password="{PASSWORD}" 
+   		 	  driverClassName="net.sourceforge.jtds.jdbc.Driver" 
+   		 	  url="jdbc:jtds:sqlserver://localhost:1433/{DATABASE}" 
+   		 	  sqlAdapter="sql.SqlServerAdapter"/>
+	-->
+	
+    <!-- DB Connection Pool - Oracle 
+  	<database maxActive="10" maxIdle="10" minIdle="2" maxWait="10000" 
+   		 	  username="{USERNAME}" password="{PASSWORD}" connectionProps="SetBigStringTryClob=true" 
+   		 	  driverClassName="oracle.jdbc.driver.OracleDriver" 
+   		 	  url="jdbc:oracle:thin:@localhost:1521:{DATABASE}" 
+   		 	  sqlAdapter="sql.OracleAdapter"/>
+	-->
+
+    <!-- Forum System Properties -->
+  	<system adminUser="admin"/>
+
+    <!-- Forum General Properties - Don't change it unless necessary -->
+  	<misc>
+  		<maxMemberPages>20</maxMemberPages> 
+  		<maxSessionPosts>10</maxSessionPosts>
+  		<maxFavorites>50</maxFavorites>
+  		<maxShortMsgs>50</maxShortMsgs>
+  		<maxAvatarPixels>150</maxAvatarPixels>
+	</misc>
+	
+</config>

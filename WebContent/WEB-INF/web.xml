@@ -1,124 +1,99 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<web-app
-		version="2.4"
-		xmlns="http://java.sun.com/xml/ns/j2ee"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="
-        http://java.sun.com/xml/ns/j2ee  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd
-    ">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+
+  <listener>
+     <listener-class>com.hongshee.ejforum.common.ContextListener</listener-class>
+  </listener>
+
+  <listener>
+     <listener-class>com.hongshee.ejforum.common.SessionListener</listener-class>
+  </listener>
+
+    <filter>
+    	<filter-name>RewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+        <init-param>
+        	<param-name>logLevel</param-name>
+            <param-value>WARN</param-value>
+        </init-param>
+    </filter>
     
-		<display-name>website demo</display-name>
-		<!-- 加载后台配置文件 -->
-	    <context-param>
-		    <param-name>contextConfigLocation</param-name>
-		    <param-value> 
-			  	classpath:/conf/*.xml
-			</param-value>
-	    </context-param>
-	    
-		<listener>
-			<listener-class>
-				org.springframework.web.context.ContextLoaderListener
-			</listener-class>
-		</listener>
-		<!-- 添加页面监听器 -->
-		<listener>
-				<listener-class>com.inspur.hsf.config.ContextLoaderListener
-				</listener-class>
-		</listener>
-		<!-- 安全检测过滤器 -->
-		<filter>
-				<filter-name>securityFilter</filter-name>
-				<filter-class>org.loushang.internet.filter.SecurityFilter
-				</filter-class>
-				<init-param>
-						<param-name>encode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-				<init-param>
-						<param-name>fromEncode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-		</filter>
-		<!-- 登录过滤器 -->
-		<!-- 主题设置过滤器 -->
-		<filter>
-				<filter-name>themeBindingFilter</filter-name>
-				<filter-class>org.loushang.internet.filter.ThemeBindingFilter
-				</filter-class>
-				<init-param>
-						<param-name>excludes</param-name>
-						<param-value>*.jpg,*.css,*.html,*.jsp,*.png,*.js,*.gif,*.swf,*.ico</param-value>
-				</init-param>
-				<init-param>
-						<param-name>encode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-				<init-param>
-						<param-name>fromEncode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-		</filter>
-		<filter-mapping>
-				<filter-name>themeBindingFilter</filter-name>
-				<url-pattern>/*</url-pattern>
-				<dispatcher>REQUEST</dispatcher>
-				<dispatcher>INCLUDE</dispatcher>
-		</filter-mapping>
-		<!-- 2、 添加请求分发过滤器 -->
-		<filter>
-				<filter-name>webDispatcher</filter-name>
-				<filter-class>org.loushang.internet.servlet.WebDispatcherFilter
-				</filter-class>
-				<init-param>
-						<param-name>excludes</param-name>
-						<param-value></param-value>
-				</init-param>
-				<init-param>
-						<param-name>encode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-				<init-param>
-						<param-name>fromEncode</param-name>
-						<param-value>UTF-8</param-value>
-				</init-param>
-		</filter>
-		<filter-mapping>
-				<filter-name>webDispatcher</filter-name>
-				<url-pattern>/*</url-pattern>
-				<dispatcher>REQUEST</dispatcher>
-				<dispatcher>INCLUDE</dispatcher>
-		</filter-mapping>
-		<filter-mapping>
-				<filter-name>securityFilter</filter-name>
-				<url-pattern>/*</url-pattern>
-		</filter-mapping>
-		<!-- 添加自定义标签库 -->
-		<jsp-config>
-				<taglib>
-						<taglib-uri>/tags/website</taglib-uri>
-						<taglib-location>/WEB-INF/tlds/website.tld</taglib-location>
-				</taglib>
-				<taglib>
-						<taglib-uri>/tags/website-function</taglib-uri>
-						<taglib-location>/WEB-INF/tlds/function.tld</taglib-location>
-				</taglib>
-				<taglib>
-						<taglib-uri>http://java.sun.com/jsp/jstl/functions</taglib-uri>
-						<taglib-location>/WEB-INF/tlds/fn.tld</taglib-location>
-				</taglib>
-				<taglib>
-						<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
-						<taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
-				</taglib>
-		</jsp-config>
-		
-	<!-- webAppRoot -->
-	<context-param>
-		<param-name>webAppRootKey</param-name>
-		<param-value>websiteDemo.root </param-value>
-	</context-param>
-	<welcome-file-list>
-		<welcome-file>websiteDemo/index.htm</welcome-file>
-	</welcome-file-list>
+    <filter-mapping>
+    	<filter-name>RewriteFilter</filter-name>
+        <url-pattern>/ejforum/*</url-pattern>
+    </filter-mapping>  
+
+    <servlet>
+	    <servlet-name>AjaxServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.AjaxServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/ejforum/ajax</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>ImageServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.ImageServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/ejforum/vcode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>AttachServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.AttachServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttachServlet</servlet-name>
+        <url-pattern>/ejforum/attach</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>RssServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.RssServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RssServlet</servlet-name>
+        <url-pattern>/ejforum/rss</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>OpmlServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.OpmlServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OpmlServlet</servlet-name>
+        <url-pattern>/ejforum/opml</url-pattern>
+    </servlet-mapping>
+
+  	<error-page>
+  	    <exception-type>java.lang.Throwable</exception-type>
+    	<location>/error.jsp</location>
+  	</error-page>
+
+    <session-config>
+        <session-timeout>20</session-timeout>    <!-- 20 minutes -->
+    </session-config>
+
 </web-app>
