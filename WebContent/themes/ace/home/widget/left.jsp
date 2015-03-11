@@ -63,6 +63,10 @@
 				<li><a href="${fn:getLink('mq/console/topic/topicDBList.jsp')}"> <i
 						class="icon-double-angle-right"></i> 单表增删改
 				</a></li>
+				
+				<li><a href="<%=request.getContextPath()+"/ejforum" %>"> <i
+						class="icon-double-angle-right"></i>论坛
+				</a></li>
 			</ul>
 		</li>
 		

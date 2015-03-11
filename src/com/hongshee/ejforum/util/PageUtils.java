@@ -362,9 +362,9 @@ public class PageUtils
       localStringBuilder.append("</UL></DIV>");
     }
     localStringBuilder.append("</P></DIV>\n");
-    localStringBuilder.append("<P class=copyright> Powered by <STRONG><A href=\"").append("http://www.easyjforum.cn/\" target=_blank>");
-    localStringBuilder.append("EasyJForum</A></STRONG> <EM>").append("2.3").append("</EM> &copy; 2005-").append(Calendar.getInstance().get(1));
-    localStringBuilder.append(" <A\n href=\"http://www.hongshee.com/\"").append(" target=_blank>Hongshee software</A></P>");
+    localStringBuilder.append("<P class=copyright> Powered by <STRONG><A href=\"").append("http://www.inspur.com/\" target=_blank>");
+    localStringBuilder.append("Inspur</A></STRONG> <EM>").append("2.3").append("</EM> &copy; 2005-").append(Calendar.getInstance().get(1));
+  //  localStringBuilder.append(" <A\n href=\"http://www.hongshee.com/\"").append(" target=_blank>Hongshee software</A></P>");
     if ((localForumSetting.getString(5, "footRemark")).length() > 0)
       localStringBuilder.append("<P id=footnote>").append((String)localObject1).append("</P>");
     localStringBuilder.append("</DIV></DIV>");

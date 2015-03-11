@@ -18,7 +18,7 @@
 	if (!request.isRequestedSessionIdFromCookie())
 	{
 		request.setAttribute("errorMsg", "请打开您的浏览器的 Cookie 支持功能, 否则不能发帖");
-		request.getRequestDispatcher("/error.jsp").forward(request, response);
+		request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 		return;
 	}
 	if (userinfo == null && !PageUtils.isUserAgent(request))  // Guest & Robot
@@ -62,14 +62,14 @@
 				fromPath = fromPath + "?" + queryStr;
 			}
 			request.setAttribute("fromPath", fromPath);
-			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/ejforum/login.jsp").forward(request, response);
 			return;
 		}
 	}
 	else if (userinfo.state == 'P')
 	{
 		request.setAttribute("errorMsg", "您已被禁止发帖或编辑帖子");
-		request.getRequestDispatcher("/error.jsp").forward(request, response);
+		request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 		return;
 	}
 
@@ -82,7 +82,7 @@
 		if (Integer.parseInt(sessionPosts.toString()) >= maxSessionPosts)
 		{
 			request.setAttribute("errorMsg", "您连续发帖数已经达到上限，不能继续发帖");
-			request.getRequestDispatcher("/error.jsp").forward(request, response);
+			request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 			return;
 		}
 	}
@@ -102,7 +102,7 @@
 		if (!PageUtils.isPermitted(aBoard,aGroup,IConstants.PERMIT_NEW_REPLY))
 		{
 			request.setAttribute("errorMsg", "您没有发表回复的权限");
-			request.getRequestDispatcher("/error.jsp").forward(request, response);
+			request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 			return;
 		}
 		notice = request.getParameter("notice");
@@ -115,7 +115,7 @@
 			|| !PageUtils.isPermitted(aBoard,aGroup,IConstants.PERMIT_NEW_TOPIC))
 		{
 			request.setAttribute("errorMsg", "您没有发布悬赏的权限");
-			request.getRequestDispatcher("/error.jsp").forward(request, response);
+			request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 			return;
 		}
 		actTitle = "发布悬赏";
@@ -131,13 +131,13 @@
 				if (aTopic.isDigest == 'T')
 				{
 					request.setAttribute("errorMsg", "此主题已被加为精华，不能再修改");
-					request.getRequestDispatcher("/error.jsp").forward(request, response);
+					request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 					return;
 				}
 				if (aTopic.state == 'C')
 				{
 					request.setAttribute("errorMsg", "此主题已经关闭，不能再修改");
-					request.getRequestDispatcher("/error.jsp").forward(request, response);
+					request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 					return;
 				}
 			}
@@ -155,7 +155,7 @@
 		if (!PageUtils.isPermitted(aBoard,aGroup,IConstants.PERMIT_NEW_TOPIC))
 		{
 			request.setAttribute("errorMsg", "您没有发新话题的权限");
-			request.getRequestDispatcher("/error.jsp").forward(request, response);
+			request.getRequestDispatcher("/ejforum/error.jsp").forward(request, response);
 			return;
 		}
 		actTitle = "发新话题";
