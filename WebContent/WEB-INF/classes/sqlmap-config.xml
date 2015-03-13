@@ -4,8 +4,5 @@
 	<settings cacheModelsEnabled="true" enhancementEnabled="true"
 		lazyLoadingEnabled="false" maxRequests="3000" maxSessions="3000"
 		maxTransactions="3000" useStatementNamespaces="true" />
-		<!-- 数据类型 -->
-		<sqlMap resource="com/inspur/databus/service/datatype/sqlmap/dataType.xml" />
-		<!-- 字典 -->
 		<sqlMap resource="com/inspur/databus/service/dic/sqlmap/dic.xml" />
 </sqlMapConfig>

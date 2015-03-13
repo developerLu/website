@@ -1,11 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/web.xml=UTF-8
 encoding//WebContent/ejforum/top.jsp=UTF-8
-encoding//WebContent/themes/ace/home/screen/index.jsp=UTF-8
-encoding//WebContent/themes/ace/home/widget/header.jsp=UTF-8
 encoding//WebContent/themes/default/home/screen/index.jsp=UTF-8
-encoding//WebContent/themes/default/home/widget/components.jsp=UTF-8
-encoding//WebContent/themes/default/home/widget/footer.jsp=UTF-8
 encoding//src/frame.properties=UTF-8
 encoding//src/login.properties=UTF-8
 encoding//src/modules.properties=UTF-8

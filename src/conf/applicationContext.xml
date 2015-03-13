@@ -27,12 +27,12 @@
 	<bean id="internalRouter" class="com.alibaba.cobar.client.router.config.DefaultCobarClientInternalRouterXmlFactoryBean">
 		<property name="configLocation" value="classpath:/sqlaction-only-rules.xml" />
 	</bean>
-	<bean id="SpringContextHolder" class="com.inspur.databus.util.SpringContextHolder"></bean>
+	<!-- <bean id="SpringContextHolder" class="com.inspur.databus.util.SpringContextHolder"></bean>
 	<bean id="GlobalId" class="com.inspur.databus.service.id.impl.DbGlobalId">
 		<property name="sqlMapClient" ><ref bean="sqlMapClientTemplate"/></property>
 	</bean>
 	<bean id="UUIDGlobalId" class="com.inspur.databus.service.id.impl.UUIDGlobalId">
 		<property name="sqlMapClient" ><ref bean="sqlMapClientTemplate"/></property>
-	</bean>
+	</bean> -->
 
 </beans>
